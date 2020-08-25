@@ -1,6 +1,6 @@
 <template>
 	<div class="carousel-3d-slide" :style="slideStyle" :class="computedClasses" @click="goTo()">
-		<slot :index="index" :isCurrent="isCurrent" :leftIndex="leftIndex" :rightIndex="rightIndex"/>
+		<slot :index="index" :title="title" :isCurrent="isCurrent" :leftIndex="leftIndex" :rightIndex="rightIndex"/>
 	</div>
 </template>
 
@@ -10,6 +10,9 @@
         props: {
             index: {
                 type: Number
+            },
+            title: {
+                type: String
             }
         },
         data () {

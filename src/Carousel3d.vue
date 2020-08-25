@@ -4,6 +4,7 @@
 			<slot></slot>
 		</div>
 		<controls v-if="controlsVisible" :next-html="controlsNextHtml" :prev-html="controlsPrevHtml"
+				  :next-aria-label="controlsNextAriaLabel" :prev-aria-label="controlsPrevAriaLabel"
 		          :width="controlsWidth" :height="controlsHeight"></controls>
 	</div>
 </template>
@@ -90,6 +91,14 @@
             controlsVisible: {
                 type: Boolean,
                 default: false
+            },
+            controlsPrevAriaLabel: {
+                type: String,
+                default: 'Previous slide'
+            },
+            controlsNextAriaLabel: {
+                type: String,
+                default: 'Next slide'
             },
             controlsPrevHtml: {
                 type: String,
